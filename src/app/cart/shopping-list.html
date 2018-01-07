@@ -1,0 +1,12 @@
+<div class="panel panel-default">
+  <div class="panel-body">
+     <ul>
+       <li *ngFor="let item of products"  class="cart-item">
+         <span>{{item.title}}</span>
+         <span>- ${{item.price}}</span>
+       </li>
+     </ul>
+    <div *ngIf="total"><b>Total:</b> ${{ total }}</div>
+    <div *ngIf="!total">Shopping cart is empty.</div>
+  </div>
+</div>

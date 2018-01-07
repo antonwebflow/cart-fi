@@ -1,0 +1,13 @@
+<div
+  class="card" style="margin-top: 30px">
+  <div class="card-body">
+    <img src="{{ product.image }}" alt="Card image cap" style="max-width: 50px; margin-bottom: 15px;">
+    <h6 class="card-title">{{ product.title }}</h6>
+    <p class="card-text"> ${{ product.price }} </p>
+
+    <button *ngIf="product.added" (click)="RemoveProduct(product)" class="btn btn-primary">Remove
+    </button>
+    <button *ngIf="!product.added" (click)="AddProduct(product)" class="btn btn-primary">Add to cart
+    </button>
+  </div>
+</div>
